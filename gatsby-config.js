@@ -3,8 +3,8 @@ const { name } = require('./package.json');
 module.exports = {
   pathPrefix: `/${name}`,
   siteMetadata: {
-    author: 'You!',
-    title: `Gatsby Default (Blog) Starter`,
+    author: 'Scott de Jonge',
+    title: `Guide`,
   },
   plugins: [
     'gatsby-plugin-react-next',
