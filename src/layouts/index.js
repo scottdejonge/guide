@@ -5,7 +5,6 @@ import Helmet from 'react-helmet'
 
 import Container from '../components/Container'
 
-import '../css/root.css'
 import '../css/reset.css'
 import '../css/typography.css'
 
@@ -19,15 +18,11 @@ export default class Template extends React.Component {
     const isRoot = location.pathname === '/'
     return (
       <div>
-        <Helmet title="Gatsby Default (Blog) Starter" meta={[{ name: 'description', content: 'Sample' }, { name: 'keywords', content: 'sample, something' }]} />
+        <Helmet title="Guide" meta={[{ name: 'description', content: 'Sample' }, { name: 'keywords', content: 'sample, something' }]} />
         <Container>
-          <h1 style={{ margin: 0, fontSize: isRoot ? `2.5rem` : `2rem` }}>
-            <Link
-              to="/"
-              style={{
-                textDecoration: 'none',
-              }}>
-              Gatsby Blog
+          <h1>
+            <Link to="/" style={{ textDecoration: 'none' }}>
+              Guide
             </Link>
           </h1>
           {this.props.children()}
