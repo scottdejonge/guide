@@ -3,7 +3,7 @@ import Link from 'gatsby-link'
 import HomeIcon from 'react-icons/lib/fa/home'
 import TagsIcon from 'react-icons/lib/fa/tags'
 
-import Button from '../components/Button'
+import Action from '../components/Action'
 
 import '../css/tags.css'
 
@@ -27,9 +27,9 @@ export default function Tags({ pathContext }) {
             )
           })}
         </ul>
-        <Button to="/tags">
+        <Action to="/tags">
           <TagsIcon /> All tags
-        </Button>
+        </Action>
       </div>
     )
   }
@@ -46,9 +46,9 @@ export default function Tags({ pathContext }) {
           )
         })}
       </ul>
-      <Button to="/">
+      <Action to="/">
         <HomeIcon /> All posts
-      </Button>
+      </Action>
     </div>
   )
 }

@@ -4,7 +4,7 @@ import Helmet from 'react-helmet'
 
 import Container from '../components/Container'
 import Grid from '../components/Grid'
-import Button from '../components/Button'
+import Action from '../components/Action'
 
 import '../css/card.css'
 
@@ -21,7 +21,7 @@ export default function Index({ data }) {
                 <Link to={post.frontmatter.path}>{post.frontmatter.title}</Link>
               </h3>
               <p>{post.excerpt}</p>
-              <Button to={post.frontmatter.path}>Read more</Button>
+              <Action to={post.frontmatter.path}>Read more</Action>
             </section>
           )
         })}

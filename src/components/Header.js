@@ -3,7 +3,7 @@ import Link from 'gatsby-link'
 
 import Container from '../components/Container'
 
-export default function Button({ children, className, to }) {
+export default function Action({ children, className, to }) {
   return (
     <Container>
       <h1>

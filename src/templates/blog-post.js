@@ -4,7 +4,7 @@ import BackIcon from 'react-icons/lib/md/chevron-left'
 import ForwardIcon from 'react-icons/lib/md/chevron-right'
 
 import Container from '../components/Container'
-import Button from '../components/Button'
+import Action from '../components/Action'
 import Tags from '../components/Tags'
 
 export default function Template({ data, pathContext }) {
@@ -19,14 +19,14 @@ export default function Template({ data, pathContext }) {
         <Tags list={post.frontmatter.tags || []} />
         <div className="navigation">
           {prev && (
-            <Button className="link prev" to={prev.frontmatter.path}>
+            <Action className="link prev" to={prev.frontmatter.path}>
               <BackIcon /> {prev.frontmatter.title}
-            </Button>
+            </Action>
           )}
           {next && (
-            <Button className="link next" to={next.frontmatter.path}>
+            <Action className="link next" to={next.frontmatter.path}>
               {next.frontmatter.title} <ForwardIcon />
-            </Button>
+            </Action>
           )}
         </div>
       </Container>
