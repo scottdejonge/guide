@@ -6,8 +6,8 @@
   float: right;
 }
 
-.blog-post .title, .blog-post .date {
-  text-align: center;
+.blog-post .title,
+.blog-post .date {
   margin: 0;
   padding: 0;
 }
