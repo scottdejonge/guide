@@ -1,0 +1,10 @@
+:root {
+  --hue: 180;
+  --saturation: 30%;
+  --lightness: 20%;
+  --color: hsl(var(--hue), var(--saturation), var(--lightness));
+
+  font-family: system-ui;
+  font-size: 16px;
+  color: var(--color);
+}

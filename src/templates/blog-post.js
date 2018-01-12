@@ -1,19 +1,19 @@
 import React from 'react'
 import Helmet from 'react-helmet'
-import BackIcon from 'react-icons/lib/fa/chevron-left'
-import ForwardIcon from 'react-icons/lib/fa/chevron-right'
+import BackIcon from 'react-icons/lib/md/chevron-left'
+import ForwardIcon from 'react-icons/lib/md/chevron-right'
 
 import Button from '../components/Button'
 import Tags from '../components/Tags'
 
-import '../css/blog-post.css'
+// import '../css/blog-post.css'
 
 export default function Template({ data, pathContext }) {
   const { markdownRemark: post } = data
   const { next, prev } = pathContext
   return (
     <div className="blog-post-container">
-      <Helmet title={`Gatsby Blog - ${post.frontmatter.title}`} />
+      <Helmet title={`${post.frontmatter.title} -  Guide`} />
       <div className="blog-post">
         <h1 className="title">{post.frontmatter.title}</h1>
         <h2 className="date">{post.frontmatter.date}</h2>
