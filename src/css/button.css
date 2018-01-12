@@ -1,4 +1,4 @@
-.link {
+.button {
   display: inline-block;
   color: rebeccapurple;
   padding: 0.75rem 1rem;
@@ -7,7 +7,7 @@
   position: relative;
 }
 
-.link:after {
+.button:after {
   content: '';
   position: absolute;
   top: 0;
@@ -24,10 +24,10 @@
   z-index: -1;
 }
 
-.link:hover {
+.button:hover {
   color: white;
 }
 
-.link:hover:after {
+.button:hover:after {
   transform: scaleY(1);
 }

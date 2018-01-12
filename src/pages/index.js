@@ -1,8 +1,8 @@
 import React from 'react';
-import GatsbyLink from 'gatsby-link';
+import Link from 'gatsby-link';
 import Helmet from 'react-helmet';
 
-import Link from '../components/Link';
+import Button from '../components/Button';
 
 import '../css/index.css';
 
@@ -16,17 +16,11 @@ export default function Index({ data }) {
           return (
             <div className="blog-post-preview" key={post.id}>
               <h1 className="title">
-                <GatsbyLink to={post.frontmatter.path}>
-                  {post.frontmatter.title}
-                </GatsbyLink>
+                <Link to={post.frontmatter.path}>{post.frontmatter.title}</Link>
               </h1>
-              <h2 className="date">
-                {post.frontmatter.date}
-              </h2>
-              <p>
-                {post.excerpt}
-              </p>
-              <Link to={post.frontmatter.path}>Read more</Link>
+              <h2 className="date">{post.frontmatter.date}</h2>
+              <p>{post.excerpt}</p>
+              <Button to={post.frontmatter.path}>Read more</Button>
             </div>
           );
         })}
