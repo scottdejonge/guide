@@ -2,28 +2,31 @@ import React from 'react'
 import Link from 'gatsby-link'
 import Helmet from 'react-helmet'
 
+import Container from '../components/Container'
 import Grid from '../components/Grid'
 import Button from '../components/Button'
+
+import '../css/card.css'
 
 export default function Index({ data }) {
   const { edges: posts } = data.allMarkdownRemark
   return (
-    <div>
+    <Container>
       <h2>Topics</h2>
       <Grid>
         {posts.filter(post => post.node.frontmatter.title.length > 0).map(({ node: post }) => {
           return (
-            <div className="card" key={post.id}>
+            <section className="card">
               <h3 className="title">
                 <Link to={post.frontmatter.path}>{post.frontmatter.title}</Link>
               </h3>
               <p>{post.excerpt}</p>
               <Button to={post.frontmatter.path}>Read more</Button>
-            </div>
+            </section>
           )
         })}
       </Grid>
-    </div>
+    </Container>
   )
 }
 
@@ -33,7 +36,6 @@ export const pageQuery = graphql`
       edges {
         node {
           excerpt(pruneLength: 120)
-          id
           frontmatter {
             title
             date(formatString: "MMMM DD, YYYY")

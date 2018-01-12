@@ -3,20 +3,18 @@ import Helmet from 'react-helmet'
 import BackIcon from 'react-icons/lib/md/chevron-left'
 import ForwardIcon from 'react-icons/lib/md/chevron-right'
 
+import Container from '../components/Container'
 import Button from '../components/Button'
 import Tags from '../components/Tags'
-
-// import '../css/blog-post.css'
 
 export default function Template({ data, pathContext }) {
   const { markdownRemark: post } = data
   const { next, prev } = pathContext
   return (
-    <div className="blog-post-container">
+    <div>
       <Helmet title={`${post.frontmatter.title} -  Guide`} />
-      <div className="blog-post">
+      <Container>
         <h1 className="title">{post.frontmatter.title}</h1>
-        <h2 className="date">{post.frontmatter.date}</h2>
         <div className="blog-post-content" dangerouslySetInnerHTML={{ __html: post.html }} />
         <Tags list={post.frontmatter.tags || []} />
         <div className="navigation">
@@ -31,7 +29,7 @@ export default function Template({ data, pathContext }) {
             </Button>
           )}
         </div>
-      </div>
+      </Container>
     </div>
   )
 }
@@ -41,7 +39,6 @@ export const pageQuery = graphql`
     markdownRemark(frontmatter: { path: { eq: $path } }) {
       html
       frontmatter {
-        date(formatString: "MMMM DD, YYYY")
         path
         tags
         title
