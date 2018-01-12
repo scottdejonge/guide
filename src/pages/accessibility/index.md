@@ -1,7 +1,7 @@
 ---
 path: "/accessibility"
 title: "Accessibility"
-tags: ["accessibility"]
+tags: ["accessibility", "css"]
 ---
 
 ## Constraints

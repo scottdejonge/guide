@@ -46,7 +46,7 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
   const blogPostTemplate = path.resolve(`src/templates/view.js`);
   return graphql(`{
     allMarkdownRemark(
-      sort: { order: DESC, fields: [frontmatter___date] }
+      sort: { order: ASC, fields: [frontmatter___title] }
       limit: 1000
     ) {
       edges {

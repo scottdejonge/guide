@@ -3,6 +3,9 @@ import Link from 'gatsby-link'
 import HomeIcon from 'react-icons/lib/fa/home'
 import TagsIcon from 'react-icons/lib/fa/tags'
 
+import Container from '../components/Container'
+import Grid from '../components/Grid'
+import Card from '../components/Card'
 import Action from '../components/Action'
 
 import '../css/tags.css'
@@ -11,26 +14,19 @@ export default function Tags({ pathContext }) {
   const { posts, post, tag } = pathContext
   if (tag) {
     return (
-      <div>
+      <Container>
         <h1>
           {post.length} post{post.length === 1 ? '' : 's'} tagged with {tag}
         </h1>
-        <ul>
+        <Grid>
           {post.map(({ id, frontmatter, excerpt }) => {
-            return (
-              <li key={id}>
-                <h1>
-                  <Link to={frontmatter.path}>{frontmatter.title}</Link>
-                </h1>
-                <p>{excerpt}</p>
-              </li>
-            )
+            return <Card key={id} title={frontmatter.title} path={frontmatter.path} excerpt={excerpt} />
           })}
-        </ul>
+        </Grid>
         <Action to="/tags">
           <TagsIcon /> All tags
         </Action>
-      </div>
+      </Container>
     )
   }
   return (
