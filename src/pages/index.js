@@ -7,6 +7,7 @@ import Grid from '../components/Grid'
 import Action from '../components/Action'
 
 import '../css/card.css'
+import '../css/utils.css'
 
 export default function Index({ data }) {
   const { edges: posts } = data.allMarkdownRemark
@@ -16,12 +17,16 @@ export default function Index({ data }) {
       <Grid>
         {posts.filter(post => post.node.frontmatter.title.length > 0).map(({ node: post }) => {
           return (
-            <section className="card">
-              <h3 className="title">
-                <Link to={post.frontmatter.path}>{post.frontmatter.title}</Link>
-              </h3>
-              <p>{post.excerpt}</p>
-              <Action to={post.frontmatter.path}>Read more</Action>
+            <section className="card" key={post.id}>
+              <div className="flex-auto">
+                <h3 className="title">
+                  <Link to={post.frontmatter.path}>{post.frontmatter.title}</Link>
+                </h3>
+                <p>{post.excerpt}</p>
+              </div>
+              <div className="flex-none m-t-xs">
+                <Action to={post.frontmatter.path}>Read more</Action>
+              </div>
             </section>
           )
         })}
@@ -35,6 +40,7 @@ export const pageQuery = graphql`
     allMarkdownRemark(sort: { order: ASC, fields: [frontmatter___title] }) {
       edges {
         node {
+          id
           excerpt(pruneLength: 120)
           frontmatter {
             title
