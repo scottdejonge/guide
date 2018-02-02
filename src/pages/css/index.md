@@ -1,6 +1,7 @@
 ---
 path: "/css"
 title: "CSS"
+description: "Writing reusable and scalable CSS"
 tags: ["css"]
 ---
 

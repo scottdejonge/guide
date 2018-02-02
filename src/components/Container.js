@@ -1,3 +1,5 @@
 import React from 'react'
 
-export default ({ children }) => <div style={{ margin: `0 auto`, padding: `0 1rem`, maxWidth: `80rem` }}>{children}</div>
+import '../css/container.css'
+
+export default ({ children }) => <div className="container">{children}</div>

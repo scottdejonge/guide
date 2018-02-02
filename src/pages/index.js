@@ -12,7 +12,15 @@ export default function Index({ data }) {
       <h2>Topics</h2>
       <Grid>
         {posts.filter(post => post.node.frontmatter.title.length > 0).map(({ node: post }) => {
-          return <Card key={post.id} title={post.frontmatter.title} path={post.frontmatter.path} excerpt={post.excerpt} />
+          return (
+            <Card
+              key={post.id}
+              path={post.frontmatter.path}
+              title={post.frontmatter.title}
+              description={post.frontmatter.description}
+              excerpt={post.excerpt}
+            />
+          )
         })}
       </Grid>
     </Container>
@@ -25,10 +33,12 @@ export const pageQuery = graphql`
       edges {
         node {
           id
-          excerpt(pruneLength: 120)
+          excerpt(pruneLength: 60)
           frontmatter {
-            title
             path
+            tags
+            title
+            description
           }
         }
       }

@@ -1,6 +1,7 @@
 ---
 path: "/svg"
 title: "SVG"
+description: ""
 tags: ["svg"]
 ---
 

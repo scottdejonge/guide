@@ -9,11 +9,14 @@ import '../css/utils.css'
 export default function Card({ className, title, excerpt, path }) {
   return (
     <div className={[`card`].concat(className || []).join(' ')}>
-      <div className="flex-auto">
-        <h3 className="title">
-          <Link to={path}>{title}</Link>
-        </h3>
-        <p>{excerpt}</p>
+      <div className="flex-none m-b-xs">Tag</div>
+      <div className="flex-none">
+        {title && (
+          <h3 className="title">
+            <Link to={path}>{title}</Link>
+          </h3>
+        )}
+        {excerpt && <p>{excerpt}</p>}
       </div>
       <div className="flex-none m-t-xs">
         <Action to={path}>Read more</Action>

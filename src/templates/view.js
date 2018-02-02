@@ -15,6 +15,7 @@ export default function Template({ data, pathContext }) {
       <Helmet title={`${post.frontmatter.title} -  Guide`} />
       <Container>
         <h1 className="title">{post.frontmatter.title}</h1>
+        <p className="title">{post.timeToRead}</p>
         <div className="blog-post-content" dangerouslySetInnerHTML={{ __html: post.html }} />
         <Tags list={post.frontmatter.tags || []} />
         <div className="navigation">

@@ -1,6 +1,7 @@
 ---
 path: "/color"
 title: "Color"
+description: ""
 tags: ["color"]
 ---
 

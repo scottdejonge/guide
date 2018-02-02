@@ -1,11 +1,11 @@
 :root {
   --border-radius: 0.25em;
 
-  --hue: 240;
-  --saturation: 30%;
-  --lightness: 20%;
+  --hue: 60;
+  --saturation: 100%;
+  --lightness: 70%;
 
-  --color: hsl(var(--hue), var(--saturation), var(--lightness));
+  --color: hsl(0, 0%, 0%);
   --accent: hsl(var(--hue), 100%, 50%);
-  --background: hsl(var(--hue), var(--saturation), 95%);
+  --background: hsl(var(--hue), var(--saturation), var(--lightness));
 }

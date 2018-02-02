@@ -1,9 +1,6 @@
-@import './variables';
-
 .card {
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   padding: 1.5rem;
-  background: white;
-  border-radius: var(--border-radius);
 }

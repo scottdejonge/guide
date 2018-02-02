@@ -5,5 +5,6 @@ p {
 }
 
 a {
-  color: var(--accent);
+  color: var(--color);
+  text-decoration: none;
 }

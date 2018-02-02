@@ -1,6 +1,7 @@
 ---
 path: "/video"
 title: "Video"
+description: ""
 tags: ["video"]
 ---
 

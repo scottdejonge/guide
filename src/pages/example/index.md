@@ -1,6 +1,7 @@
 ---
 path: "/example"
 title: "Example"
+description: ""
 tags: ["example"]
 ---
 

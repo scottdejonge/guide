@@ -1,5 +1,24 @@
+@import './variables';
+
 .grid {
-  display: grid;
-  grid-gap: 2rem;
-  grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
+  @supports (display: grid) {
+    display: grid;
+    grid-gap: 0.25rem;
+    background: var(--color);
+    border: 0.25rem solid var(--color);
+
+    & > div {
+      background: var(--background);
+    }
+
+    @media (min-width: 30rem) {
+      grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
+      grid-template-rows: repeat(auto-fill, minmax(20rem, 1fr));
+
+      & > div:nth-child(7n + 1) {
+        grid-column: span 2;
+        grid-row: span 2;
+      }
+    }
+  }
 }

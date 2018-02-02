@@ -1,6 +1,7 @@
 ---
 path: "/accessibility"
 title: "Accessibility"
+description: ""
 tags: ["accessibility", "css"]
 ---
 
