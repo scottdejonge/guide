@@ -1,11 +1,14 @@
 :root {
   --border-radius: 0.25em;
 
-  --hue: 60;
+  --hue: 20;
   --saturation: 100%;
-  --lightness: 70%;
+  --lightness: 95%;
 
-  --color: hsl(0, 0%, 0%);
+  --color: hsl(var(--hue), var(--saturation), 20%);
   --accent: hsl(var(--hue), 100%, 50%);
-  --background: hsl(var(--hue), var(--saturation), var(--lightness));
+  --background: hsl(var(--hue), var(--saturation), 95%);
+
+  --serif-text: 'Crimson Text', Georgia, 'Times New Roman', Times, serif;
+  --serif-display: 'Playfair Display', Georgia, 'Times New Roman', Times, serif;
 }

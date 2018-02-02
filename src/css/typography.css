@@ -1,6 +1,41 @@
 @import './variables';
 
-p {
+h1 {
+  font-family: var(--serif-display);
+  font-weight: 900;
+  line-height: 1.2;
+}
+
+h2 {
+  font-family: var(--serif-display);
+  line-height: 1.2;
+}
+
+h3 {
+  font-family: var(--serif-display);
+  line-height: 1.2;
+}
+
+h4 {
+  font-family: var(--serif-display);
+  line-height: 1.2;
+}
+
+h5 {
+  font-family: var(--serif-display);
+  line-height: 1.2;
+}
+
+h6 {
+  font-family: var(--serif-display);
+  line-height: 1.2;
+}
+
+p,
+ul,
+li,
+table {
+  font-family: var(--serif-text);
   line-height: 1.5;
 }
 

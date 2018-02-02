@@ -10,7 +10,7 @@ export default function Card({ className, title, excerpt, path }) {
   return (
     <div className={[`card`].concat(className || []).join(' ')}>
       <div className="flex-none m-b-xs">Tag</div>
-      <div className="flex-none">
+      <div className="flex-auto">
         {title && (
           <h3 className="title">
             <Link to={path}>{title}</Link>
